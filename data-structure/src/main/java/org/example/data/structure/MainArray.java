@@ -1,0 +1,34 @@
+package org.example.data.structure;
+
+import java.util.Arrays;
+
+public class MainArray {
+
+    public static void main(String[] args) {
+        Function1Dot1 function1Dot1 = new Function1Dot1();
+
+        String testString = "abcdefghijklm";
+
+        System.out.println("first case:" + function1Dot1.isUniqueChars(testString));
+        System.out.println("first case with bit:" + function1Dot1.isUniqueCharsWithBit(testString));
+
+        System.out.println("second case:" + function1Dot1.isUniqueChars(testString + "a"));
+        System.out.println("second case with bit:" + function1Dot1.isUniqueCharsWithBit(testString + "a"));
+
+        Function1Dot2 function1Dot2Dash1 = new Function1Dot2();
+
+        System.out.println("1.2 simple result: " + function1Dot2Dash1.permutation("dog", "god"));
+        System.out.println("1.2 occurrence result: " + function1Dot2Dash1.permutaionWithOccurance("dog", "god"));
+
+        Function1Dot3 function1Dot3 = new Function1Dot3();
+        System.out.println("1.3 result : " + Arrays.toString(function1Dot3.replaceSpaces("Mr John Smith".toCharArray(),
+                13)));
+
+        String question = "tomacto";
+        Function1Dot4 function1Dot4 = new Function1Dot4();
+        System.out.println("1.4 answer: " + function1Dot4.isPalindrome(question));
+
+        System.out.println("1.4 answer with Bit: " + function1Dot4.isPalindromeWithBit(question));
+    }
+
+}
