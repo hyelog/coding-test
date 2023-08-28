@@ -1,0 +1,6 @@
+data-structure/.gradle
+data-structure/.idea
+data-structure/build
+data-structure/gradle
+data-structure/.gradle/*
+.idea

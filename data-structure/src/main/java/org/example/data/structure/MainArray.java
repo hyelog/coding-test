@@ -29,6 +29,20 @@ public class MainArray {
         System.out.println("1.4 answer: " + function1Dot4.isPalindrome(question));
 
         System.out.println("1.4 answer with Bit: " + function1Dot4.isPalindromeWithBit(question));
+
+        String firstWord = "pale";
+        String secondWord = "bake";
+        Function1Dot5 function1Dot5 = new Function1Dot5();
+        System.out.println("1.5 answer: " + (function1Dot5.isRecurrenceOne(firstWord, secondWord)?"true" : "false"));
+
+        String compressionTest = "aaaabbccaaabb";
+
+        StringCompression stringCompression = new StringCompression();
+        System.out.println("1.6 answer: " + stringCompression.compress(compressionTest));
+
+        MatrixRotation matrixRotation = new MatrixRotation();
+        int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        matrixRotation.rotate(matrix);
     }
 
 }
