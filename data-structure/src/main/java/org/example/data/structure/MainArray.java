@@ -52,6 +52,9 @@ public class MainArray {
 
         StringRotation stringRotation = new StringRotation();
         System.out.println(stringRotation.rotation(text1, text2)?"true":"false");
+
+        System.out.println(stringRotation.rationWithSubString(text1, text2)?"true":"false");
+
     }
 
 }
