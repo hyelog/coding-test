@@ -46,6 +46,12 @@ public class MainArray {
 
         int[][] matrixZero = {{3, 0, 0}, {0, 3, 4}, {5, 6, 7}};
         matrixProblem.zeroMatrix(matrixZero);
+
+        String text1 = "waterer";
+        String text2 = "erwater";
+
+        StringRotation stringRotation = new StringRotation();
+        System.out.println(stringRotation.rotation(text1, text2)?"true":"false");
     }
 
 }
