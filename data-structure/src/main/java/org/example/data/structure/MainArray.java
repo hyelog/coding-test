@@ -40,9 +40,12 @@ public class MainArray {
         StringCompression stringCompression = new StringCompression();
         System.out.println("1.6 answer: " + stringCompression.compress(compressionTest));
 
-        MatrixRotation matrixRotation = new MatrixRotation();
+        MatrixProblem matrixProblem = new MatrixProblem();
         int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        matrixRotation.rotate(matrix);
+        matrixProblem.rotate(matrix);
+
+        int[][] matrixZero = {{3, 0, 0}, {0, 3, 4}, {5, 6, 7}};
+        matrixProblem.zeroMatrix(matrixZero);
     }
 
 }
