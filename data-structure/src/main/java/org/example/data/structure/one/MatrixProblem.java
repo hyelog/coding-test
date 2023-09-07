@@ -1,4 +1,4 @@
-package org.example.data.structure;
+package org.example.data.structure.one;
 
 public class MatrixProblem {
     public boolean rotate(int[][] matrix) {

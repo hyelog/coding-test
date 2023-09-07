@@ -1,4 +1,4 @@
-package org.example.data.structure;
+package org.example.data.structure.one;
 
 public class StringRotation {
     public boolean rotation(String text1, String text2) {

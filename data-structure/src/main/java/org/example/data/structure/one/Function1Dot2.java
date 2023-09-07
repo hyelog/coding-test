@@ -1,4 +1,4 @@
-package org.example.data.structure;
+package org.example.data.structure.one;
 
 public class Function1Dot2 {
     private String sort(String s) {

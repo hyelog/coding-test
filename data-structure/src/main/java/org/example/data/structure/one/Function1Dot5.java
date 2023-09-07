@@ -1,4 +1,4 @@
-package org.example.data.structure;
+package org.example.data.structure.one;
 
 public class Function1Dot5 {
     public boolean isRecurrenceOne(String firstWord, String secondWord) {
