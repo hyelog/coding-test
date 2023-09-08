@@ -307,4 +307,59 @@ public class LinkedListProblem {
         return res;
     }
 
+    static LinkedListNode getKthNode(LinkedListNode head, int k) {
+        LinkedListNode current = head;
+        while (k > 0 && current != null) {
+            current = current.next;
+            k--;
+        }
+        return current;
+    }
+
+    public static LinkedListNode findIntersection(LinkedListNode list1, LinkedListNode list2) {
+        if (list1 == null || list2 == null) return null;
+        ResultWithTail result1 = ResultWithTail.getTailAndSize(list1);
+        ResultWithTail result2 = ResultWithTail.getTailAndSize(list2);
+
+        if (result1.tail != result2.tail) {
+            return null;
+        }
+
+        LinkedListNode shorter = result1.size < result2.size ? list1 : list2;
+        LinkedListNode longer = result1.size > result2.size ? list1 : list2;
+
+        longer = getKthNode(longer, Math.abs(result1.size - result2.size));
+
+        while (shorter != longer) {
+            shorter = shorter.next;
+            longer = longer.next;
+        }
+        return longer;
+    }
+
+    public static LinkedListNode findBeginning(LinkedListNode head) {
+        LinkedListNode slow = head;
+        LinkedListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
+                break;
+            }
+        }
+
+        if (fast == null || fast.next == null) {
+            return null;
+        }
+
+        slow = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return fast;
+    }
+
 }

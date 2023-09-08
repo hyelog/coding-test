@@ -143,6 +143,48 @@ public class MainArray {
         System.out.println("Is it palindrome?" + (LinkedListProblem.isPalindromeWithRunner(head2_7_2)?"true":"false"));
         System.out.println("Is it palindrome?" + (LinkedListProblem.isPalindromeWithRecursive(head2_7_2)?"true":"false"));
 
+        System.out.println("# 2.7");
+
+        int[] data2_8 = {3, 1, 5, 9, 7, 2, 1};
+
+        LinkedListNode current2_8, head2_8 = null;
+        head2_8 = new LinkedListNode(data2_8[0], null, null);
+        current2_8 = head2_8;
+        for (int i=1; i<data2_8.length; i++) {
+            current2_8 = new LinkedListNode(data2_8[i], null, current2_8);
+        }
+
+        LinkedListNode current2_8_2, head2_8_2 = null;
+        head2_8_2 = new LinkedListNode(4, null, null);
+        current2_8_2 = head2_8_2;
+        current2_8_2 = new LinkedListNode(6, null, current2_8_2);
+
+        head2_8_2.next.next = head2_8.next.next.next.next;
+        System.out.println("2.7 answer");
+
+        LinkedListNode head2_8_answer = LinkedListProblem.findIntersection(head2_8, head2_8_2);
+
+        while (head2_8_answer != null) {
+            System.out.println(head2_8_answer.data);
+            head2_8_answer = head2_8_answer.next;
+        }
+
+        System.out.println("# 2.8");
+        int list_length = 100;
+        int k = 10;
+
+        // Create linked list
+        LinkedListNode[] nodes = new LinkedListNode[list_length];
+        for (int i = 0; i < list_length; i++) {
+            nodes[i] = new LinkedListNode(i, null, i > 0 ? nodes[i - 1] : null);
+        }
+
+        // Create loop;
+        nodes[list_length - 1].next = nodes[list_length - k];
+
+        LinkedListNode answer2_10 = LinkedListProblem.findBeginning(nodes[0]);
+
+        System.out.println(answer2_10.data);
     }
 
 }
