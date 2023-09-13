@@ -1,5 +1,7 @@
 package org.example.data.structure.three;
 
+import java.util.EmptyStackException;
+
 public class MainThree {
     public static void main(String[] args) {
         int capacity_per_substack = 5;
@@ -8,7 +10,11 @@ public class MainThree {
             set.push(i);
         }
         for (int i=0; i<35; i++) {
-            System.out.println("Popped " + set.pop());
+            try {
+                System.out.println("Popped " + set.pop());
+            } catch (EmptyStackException ex) {
+                System.out.println("Empty");
+            }
         }
     }
 }

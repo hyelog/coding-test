@@ -1,5 +1,7 @@
 package org.example.data.structure.three;
 
+import java.util.EmptyStackException;
+
 public class Stack {
     private int capacity;
     public Node top, bottom;
@@ -24,6 +26,7 @@ public class Stack {
     }
 
     public int pop() {
+        if (top == null) throw new EmptyStackException();
         Node t = top;
         top = top.below;
         size--;
